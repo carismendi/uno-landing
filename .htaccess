@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+RewriteEngine On
+RewriteCond %{HTTPS} On
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
